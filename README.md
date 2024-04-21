@@ -34,6 +34,8 @@ I've decided to create this repository with challenges in various programming la
 
 **Bônus:** Implementar um projeto utilizando o framework Qt para construção de interfaces gráficas em C++.
 
+<hr>
+
 ### Python
 
 1. **Nível 1: Calculadora de Média**
@@ -57,6 +59,8 @@ I've decided to create this repository with challenges in various programming la
    - Estilo/Modelo/Paradigma/Metodologia: Orientado a Dados.
 
 **Bônus:** Desenvolver uma aplicação web utilizando o framework Django para Python.
+
+<hr>
 
 ### Bash
 
@@ -82,6 +86,8 @@ I've decided to create this repository with challenges in various programming la
 
 **Bônus:** Utilizar o framework Ansible para automação de tarefas em servidores utilizando Bash.
 
+<hr>
+
 ### PHP
 
 1. **Nível 1: Formulário de Contato**
@@ -106,6 +112,8 @@ I've decided to create this repository with challenges in various programming la
 
 **Bônus:** Utilizar o framework Laravel para desenvolver um projeto complexo, como uma plataforma de mídia social.
 
+<hr>
+
 ### JavaScript
 
 1. **Nível 1: Calculadora de IMC**
@@ -129,6 +137,8 @@ I've decided to create this repository with challenges in various programming la
    - Estilo/Modelo/Paradigma/Metodologia: Orientado a Eventos.
 
 **Bônus:** Utilizar o framework React.js para desenvolver uma aplicação web complexa, como uma plataforma de streaming de vídeo.
+
+<hr>
 
 ### Assembly
 
