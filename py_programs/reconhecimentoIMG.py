@@ -1,12 +1,11 @@
-import numpy as np                                                      # pip install numpy
-import matplotlib.pyplot as plt                                         # pip install matplotlib
-from PIL import Image                                                   # pip install pillow
-
-from tensorflow.keras.datasets import cifar10                           # pip install tensorflow
-from tensorflow.keras.applications import MobileNetV2                   # pip install tensorflow
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D       # pip install tensorflow
-from tensorflow.keras.models import Model, load_model                   # pip install tensorflow
-from tensorflow.keras.preprocessing.image import ImageDataGenerator     # pip install tensorflow
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+from tensorflow.keras.datasets import cifar10
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 def load_cifar10_data():
     (x_train, y_train), (x_test, y_test) = cifar10.load_data()
@@ -74,8 +73,8 @@ def load_saved_model(filename):
 
 def predict_image(model, image_path, class_names):
     img = Image.open(image_path)
-    img = img.resize((32, 32))  # Resize image to match CIFAR-10 input size
-    img_array = np.expand_dims(np.array(img), axis=0) / 255.0  # Normalize image
+    img = img.resize((32, 32))
+    img_array = np.expand_dims(np.array(img), axis=0) / 255.0
 
     prediction = model.predict(img_array)
     predicted_class = class_names[np.argmax(prediction)]
@@ -105,14 +104,12 @@ def main():
     print(f"Test Loss: {test_loss}")
     print(f"Test Accuracy: {test_acc}")
 
-    # Save the model
+
     save_model(model, 'cifar10_model.h5')
 
-    # Load the saved model
     loaded_model = load_saved_model('cifar10_model.h5')
 
-    # Predict image
-    image_path = 'example_image.jpg'  # Path to example image
+    image_path = 'example_image.jpg'
     predict_image(loaded_model, image_path, class_names)
 
 if __name__ == "__main__":

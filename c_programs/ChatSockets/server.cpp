@@ -79,7 +79,7 @@ int main()
         clients.push_back(clientSocket);
 
         std::thread clientThread(handleClient, clientSocket);
-        clientThread.detach(); // Libera a thread para execução independente
+        clientThread.detach();
     }
 
     close(serverSocket);

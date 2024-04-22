@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Visualização: interação com o usuário
 class HangmanView 
 {
     public:

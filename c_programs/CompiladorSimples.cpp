@@ -5,7 +5,6 @@
 #include <map>
 #include <stack>
 
-// Enumeração para os tipos de token
 enum class TokenType 
 {
     OPERATOR,
@@ -14,20 +13,17 @@ enum class TokenType
     RIGHT_PAREN
 };
 
-// Estrutura para representar um token
 struct Token 
 {
     TokenType type;
     std::string value;
 };
 
-// Função para verificar se um caractere é um operador
 bool isOperator(char c) 
 {
     return c == '+' || c == '-' || c == '*' || c == '/';
 }
 
-// Função para tokenizar uma expressão
 std::vector<Token> tokenize(const std::string& expression) 
 {
     std::vector<Token> tokens;
@@ -55,7 +51,6 @@ std::vector<Token> tokenize(const std::string& expression)
     return tokens;
 }
 
-// Função para converter a expressão de infix para postfix
 std::vector<Token> infixToPostfix(const std::vector<Token>& infixTokens) 
 {
     std::vector<Token> postfix;
@@ -87,7 +82,7 @@ std::vector<Token> infixToPostfix(const std::vector<Token>& infixTokens)
                 postfix.push_back(operatorStack.top());
                 operatorStack.pop();
             }
-            operatorStack.pop(); // Remove o '('
+            operatorStack.pop();
         }
     }
 
@@ -100,7 +95,6 @@ std::vector<Token> infixToPostfix(const std::vector<Token>& infixTokens)
     return postfix;
 }
 
-// Função para compilar uma expressão aritmética para código de máquina
 std::string compile(const std::string& expression) 
 {
     std::vector<Token> infixTokens = tokenize(expression);

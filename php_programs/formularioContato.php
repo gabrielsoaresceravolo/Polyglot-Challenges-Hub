@@ -34,27 +34,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    // Função para limpar entrada contra XSS
     function limparEntrada($entrada) 
     {
         return htmlspecialchars(strip_tags(trim($entrada)), ENT_QUOTES, 'UTF-8');
     }
 
-    // Coletando dados do formulário
     $nome = limparEntrada($_POST['nome']);
     $email = limparEntrada($_POST['email']);
     $mensagem = limparEntrada($_POST['mensagem']);
 
-    // Prevenção contra SQL injection usando prepared statements
     try 
     {
-        $pdo = new PDO('mysql: host=LOCAL; dbname=DATA-BASE-TEST', 'ROOT', 'PASSWORD'); // ---===--- DATA BASE TEST ---===---
+        $pdo = new PDO('mysql: 
+                                host=localhost; 
+                                dbname=NAME DATA BASE', 
+                                'root', 
+                                'passworld');
+
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        // Preparar a consulta SQL
         $stmt = $pdo->prepare("INSERT INTO mensagens (nome, email, mensagem) VALUES (:nome, :email, :mensagem)");
         
-        // Executar a consulta
         $stmt->execute(array(
             ':nome' => $nome,
             ':email' => $email,

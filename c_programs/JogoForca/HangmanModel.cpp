@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Modelo: lógica do jogo
 class HangmanModel 
 {
     private:

@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# Função para exibir mensagem de erro e sair do script
 exibir_erro() 
 {
     echo "Erro: $1"
     exit 1
 }
 
-# Verificar se o usuário possui permissões de superusuário
 verificar_privilegios() 
 {
     if [ "$(id -u)" != "0" ]; then
@@ -15,7 +13,6 @@ verificar_privilegios()
     fi
 }
 
-# Verificar se o sistema é compatível (este exemplo é para distribuições Linux baseadas em Debian)
 verificar_compatibilidade() 
 {
     if ! command -v apt &> /dev/null; then
@@ -23,7 +20,6 @@ verificar_compatibilidade()
     fi
 }
 
-# Função para instalar o Apache
 instalar_apache() 
 {
     echo "Instalando Apache..."
@@ -33,7 +29,6 @@ instalar_apache()
     echo "Apache instalado e iniciado com sucesso."
 }
 
-# Função para instalar o MySQL
 instalar_mysql() 
 {
     echo "Instalando MySQL..."
@@ -43,7 +38,6 @@ instalar_mysql()
     echo "MySQL instalado e iniciado com sucesso."
 }
 
-# Função para instalar o PHP
 instalar_php() 
 {
     echo "Instalando PHP..."
@@ -51,7 +45,6 @@ instalar_php()
     echo "PHP instalado com sucesso."
 }
 
-# Função principal de instalação
 instalacao() 
 {
     verificar_privilegios
@@ -64,5 +57,4 @@ instalacao()
     echo "Instalação concluída."
 }
 
-# Iniciar a instalação
 instalacao

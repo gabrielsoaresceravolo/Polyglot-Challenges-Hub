@@ -3,7 +3,6 @@
 #include "HangmanModel.cpp"
 #include "HangmanView.cpp"
 
-// Controle: coordenação do jogo
 class HangmanController 
 {
     private:

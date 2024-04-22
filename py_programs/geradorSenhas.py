@@ -16,7 +16,7 @@ class GeradorSenha:
     def gerar_senha_alta_seguranca(self):
         caracteres = string.ascii_letters + string.digits + string.punctuation
         senha = ''.join(random.choice(caracteres) for _ in range(self.tamanho))
-        return ''.join(random.sample(senha, len(senha)))  # Embaralha a senha
+        return ''.join(random.sample(senha, len(senha)))
 
     def gerar_senhas(self, quantidade=1, nivel='alta', incluir_caracteres_especiais=True):
         senhas = []
@@ -28,14 +28,13 @@ class GeradorSenha:
             elif nivel == 'alta':
                 senha = self.gerar_senha_alta_seguranca()
             if not incluir_caracteres_especiais:
-                senha = ''.join(c for c in senha if c.isalnum())  # Remove caracteres especiais
+                senha = ''.join(c for c in senha if c.isalnum())
             senhas.append(senha)
         return senhas
 
 if __name__ == "__main__":
     gerador = GeradorSenha()
 
-    # Exemplo Testado
     nivel_seguranca = input("Escolha o nível de segurança (baixa, média, alta): ").lower()
     quantidade_senhas = int(input("Quantas senhas deseja gerar? "))
     incluir_caracteres_especiais = input("Deseja incluir caracteres especiais? (s/n): ").lower() == 's'

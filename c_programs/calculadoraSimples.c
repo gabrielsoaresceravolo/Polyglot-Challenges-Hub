@@ -1,24 +1,20 @@
 #include <stdio.h>
 
-// Função para adição
 float adicao(float num1, float num2) 
 {
     return num1 + num2;
 }
 
-// Função para subtração
 float subtracao(float num1, float num2) 
 {
     return num1 - num2;
 }
 
-// Função para multiplicação
 float multiplicacao(float num1, float num2) 
 {
     return num1 * num2;
 }
 
-// Função para divisão
 float divisao(float num1, float num2) 
 {
     if (num2 != 0)
@@ -30,22 +26,17 @@ float divisao(float num1, float num2)
     }
 }
 
-// =====================================================================================================================
-
 int main() 
 {
     float num1, num2;
     char operador;
 
-    // Solicitar ao usuário para inserir a operação
     printf("Digite a operacao (+, -, *, /): ");
     scanf("%c", &operador);
 
-    // Solicitar ao usuário para inserir os números
     printf("Digite dois numeros: ");
     scanf("%f %f", &num1, &num2);
 
-    // Realizar a operação com base no operador inserido
     switch (operador) 
     {
         case '+':

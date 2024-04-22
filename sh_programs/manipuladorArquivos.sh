@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Função para renomear um arquivo
 renomear_arquivo() 
 {
     echo "Digite o nome do arquivo que deseja renomear:"
@@ -16,7 +15,6 @@ renomear_arquivo()
     fi
 }
 
-# Função para mover um arquivo para um diretório específico
 mover_arquivo() 
 {
     echo "Digite o nome do arquivo que deseja mover:"
@@ -36,7 +34,6 @@ mover_arquivo()
     fi
 }
 
-# Função para excluir um arquivo
 excluir_arquivo() 
 {
     echo "Digite o nome do arquivo que deseja excluir:"
@@ -56,7 +53,6 @@ excluir_arquivo()
     fi
 }
 
-# Função para listar o conteúdo de um diretório
 listar_conteudo() 
 {
     echo "Digite o caminho do diretório que deseja listar (ou '.' para o diretório atual):"
@@ -70,7 +66,6 @@ listar_conteudo()
     fi
 }
 
-# Menu principal
 while true; do
     echo "Escolha uma opção:"
     echo "1. Renomear arquivo"
