@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="" alt="Repository Cover">
+  <img src="https://github.com/gabrielsoaresceravolo/Polyglot-Challenges-Hub/assets/132103393/a8e3f15f-c63d-4ff2-88f9-23d156238eb9" alt="Repository Cover">
 </p>
+
 
 ![DEVELOPING](http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge)
 
